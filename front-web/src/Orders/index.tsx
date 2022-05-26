@@ -20,7 +20,7 @@ export default function Orders() {
   useEffect(() => {
     fetchProducts()
       .then(response => setProducts(response.data))
-      .catch(error => console.log(error))
+      .catch(error =>  toast.warning('Erro ao carregar o banco de dados'))
   }, [])
 
   const handleSelectProduct = (product: Product) => {
