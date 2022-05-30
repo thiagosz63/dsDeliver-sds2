@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 export default function Home() {
-    const handleOnPress = () => {
+    const navigation = useNavigation<any>();
 
+    const handleOnPress = () => {
+        navigation.navigate('Orders')
     }
     return (
         <>
@@ -17,12 +19,13 @@ export default function Home() {
                 </Text>
             </View>
 
-            <View style={styles.footer}>
-                <RectButton
+            <View style={styles.container}>
+                <TouchableOpacity
                     style={styles.button}
-                    onPress={handleOnPress}>
+                    onPress={handleOnPress}
+                >
                     <Text style={styles.buttonText}>VER PEDIDOS</Text>
-                </RectButton>
+                </TouchableOpacity>
             </View>
         </>
     );
