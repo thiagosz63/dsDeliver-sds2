@@ -1,8 +1,8 @@
 import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { StyleSheet, ScrollView, Alert, TouchableOpacity, Text } from "react-native";
-import { fetchOrders } from "../api";
-import OrderCard from "./orderCard";
+import { fetchOrders } from "../../api";
+import OrderCard from "../../components/orderCard";
 import { Order } from "./types";
 
 export default function Orders() {

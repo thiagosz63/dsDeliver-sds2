@@ -1,5 +1,5 @@
-import { Text, View, StyleSheet} from "react-native";
-import { Order } from "./types";
+import { Text, View, StyleSheet } from "react-native";
+import { Order } from "../../views/orders/types";
 import dayjs from 'dayjs';
 import 'dayjs/locale/pt-br';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -7,24 +7,36 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.locale('pt-br');
 dayjs.extend(relativeTime);
 
-type Props ={
-    order:Order
+type Props = {
+    order: Order
 }
-function dateFromNow(date : string){
+function dateFromNow(date: string) {
     return dayjs().from(dayjs(date))
 }
+function numberFormat(price: number) {
+    return 'R$' + price.toFixed(2).replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2")
+}
 
 
-export default function OrderCard({order}: Props) {
+export default function OrderCard({ order }: Props) {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.orderName}> Pedido {order.id}</Text>
-                <Text style={styles.orderPrice}>{order.total}</Text>
+                <Text style={styles.orderName}>
+                    Pedido {order.id}
+                </Text>
+
+                <Text style={styles.orderPrice}>
+                    {numberFormat(order.total)}
+                </Text>
             </View>
-            <Text style={styles.text}>{dateFromNow(order.moment)}</Text>
+
+            <Text style={styles.text}>
+                {dateFromNow(order.moment)}
+            </Text>
+
             <View style={styles.productsList}>
-                {order.products.map(product =>(
+                {order.products.map(product => (
                     <Text key={product.id} style={styles.text}>{product.name}</Text>
                 ))}
             </View>

@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <TouchableWithoutFeedback onPress={()=> navigation.navigate("Home")}>
             <View style={styles.container}>
-                <Image source={require('../assets/logo.png')} />
+                <Image source={require('../../assets/logo.png')} />
                 <Text style={styles.text}>DS Delivery</Text>
             </View>
         </TouchableWithoutFeedback>

@@ -1,9 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Header from "../header";
-import Home from "../home";
-import OrderDetail from "../orderDetail";
-import Orders from "../orders";
+import Header from "../components/header";
+import Home from "../views/home";
+import OrderDetail from "../views/orderDetail";
+import Orders from "../views/orders";
 
 const Stack = createNativeStackNavigator();
 

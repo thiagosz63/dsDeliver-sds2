@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <>
             <View style={styles.container}>
-                <Image source={require('../assets/deliveryman.png')} />
+                <Image source={require('../../assets/deliveryman.png')} />
                 <Text style={styles.title}>
                     Acompanhe os Pedidos e{'\n'}Entregue no Prazo
                 </Text>

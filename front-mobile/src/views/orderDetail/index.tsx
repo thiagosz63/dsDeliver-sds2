@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { Image, StyleSheet, Text, View, TouchableOpacity, Alert,Linking } from 'react-native';
-import { confirmDelivery } from '../api';
-import OrderCard from '../orders/orderCard';
+import { confirmDelivery } from '../../api';
+import OrderCard from '../../components/orderCard';
 import { Order } from '../orders/types';
 
 type Props = {
