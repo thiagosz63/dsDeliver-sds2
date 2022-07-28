@@ -1,5 +1,7 @@
 # Sistema DS Delivery
 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/thiagosz63/dsDeliver-sds2/blob/main/Licence) 
+
 Url para visualizar o projeto
 
 https://ds-delivery-tsa.netlify.app/
@@ -9,6 +11,13 @@ https://ds-delivery-tsa.netlify.app/
 DS Delivery é uma aplicação full stack web e mobile construída durante a 2ª edição da **Semana DevSuperior** (#sds2), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
 A aplicação consiste em um sistema de delivery, onde o cliente poderá efetuar o pedido atraves do sistema web, e atraves do app mobile o vendedor poderá visualizar os pedidos, indicando quem o fez e onde será entregue.
+
+## Layout Web
+![image](https://user-images.githubusercontent.com/67565582/181405855-88117dd1-7a28-4583-9110-5567b7c07cd2.png)
+
+
+
+
 
 # Tecnologias utilizadas
 ## Back end
